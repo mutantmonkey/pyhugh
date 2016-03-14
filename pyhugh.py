@@ -94,8 +94,8 @@ class PyHugh(object):
         }
         return self.request('/groups', method='POST', data=json.dumps(data))
 
-    def group_action(self, group, newstate):
-        return self.request('/groups/{0}/action'.format(group.group_id),
+    def group_action(self, group_id, newstate):
+        return self.request('/groups/{0}/action'.format(group_id),
                             method='PUT',
                             data=json.dumps(newstate))
 
