@@ -12,7 +12,7 @@ class HueException(BaseException):
 
 class PyHugh(object):
     def __init__(self, bridge_ip, username=None):
-        self.logger = logging.getLogger('pyhue')
+        self.logger = logging.getLogger('pyhugh')
         self.bridge_ip = bridge_ip
         self.devicetype = "PyHugh"
         self.username = username
