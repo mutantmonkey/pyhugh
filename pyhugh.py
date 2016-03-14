@@ -138,8 +138,9 @@ class PyHugh(object):
 
     def modify_scene_light(self, scene, light, state):
         return self.request(
-            '/scenes/{scene}/lights/{light}/state'.format(scene=scene.scene_id,
-                                                          light=light_id),
+            '/scenes/{scene}/lights/{light}/state'.format(
+                scene=scene.scene_id,
+                light=light.light_id),
             method='PUT',
             data=json.dumps(state))
 
